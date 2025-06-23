@@ -13,7 +13,7 @@ Copyright (c) 2022 Thanos-DB
 
 ## Weights
 We host our trained weights file on Google Drive. To fetch, you could download it from the link below and saved it at weights/train/:
-https://drive.google.com/file/d/1zPwY0kVRobl6RFg4YyEofn6wHCg7wtEn/view?usp=drive_link
+TBA
 
 And insert a line just before your model.predict():
 
