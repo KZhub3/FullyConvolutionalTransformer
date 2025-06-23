@@ -14,13 +14,13 @@ if gpus:
         print(e)
 
 #%%
-data_folder = r'/gpfs3/well/hopewell/projects/ukbb_cardiac/data/training'
+data_folder = r'/type/your/path'
 X, y, folder_names = load_data(data_folder)# X: DICOM images; y: masks
 #%%
 train_data, val_data, train_masks, val_masks, folders_train, folders_val = split_data(X, y, folder_names)
 print(train_data.shape, val_data.shape, train_masks.shape, val_masks.shape)
 #%%
-batch_size = 1
+batch_size = 4
 train_generator=unite_gen(train_data, train_masks, batch_size, dset = "training")
 val_generator=unite_gen(val_data, val_masks, batch_size, dset = "validation")
 #%%
