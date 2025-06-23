@@ -98,7 +98,7 @@ history = model.fit(train_generator,
           epochs=warmup_run_epochs,
           callbacks=[warm_up_lr],
           )
-np.save('acdc_history_warmup_bestmodel.npy',history.history)
+np.save('history_warmup_bestmodel.npy',history.history)
 
 # second training with rlrop
 history = model.fit(train_generator,
@@ -110,7 +110,7 @@ history = model.fit(train_generator,
           )
 
 
-np.save('acdc_history_rlrop_bestmodel.npy',history.history)
+np.save('history_rlrop_bestmodel.npy',history.history)
 
 # Make Predictions
 predicted = model.predict(val_data, batch_size=batch_size)
